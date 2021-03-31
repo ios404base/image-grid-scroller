@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ImagesComponent } from './images/images.component';
 import { ImageService } from './service/image.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ScrollingModule
   ],
   providers: [ImageService],
   bootstrap: [AppComponent]

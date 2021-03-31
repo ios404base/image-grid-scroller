@@ -8,17 +8,27 @@ import { Image } from '../model/image';
   styleUrls: ['./images.component.scss']
 })
 export class ImagesComponent implements OnInit {
-  images: Image[];
+  images: Image[] = [];
+  isLoading: boolean;
 
   constructor(private service: ImageService) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.getImages();
   }
 
+  /**
+   * Gets 30 images at once and repeats 333 times
+   */
   getImages(): void {
     this.service.getImages().subscribe((data: Image[]) => {
-      this.images = data;
+      for (var i = 0; i < 333; i++) {
+        this.images.push(...data);
+      }
+      if (i === 333) {
+        this.isLoading = false;
+      }
     });
   }
 }
