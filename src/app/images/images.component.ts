@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageService } from '../service/image.service';
+import { Image } from '../model/image';
 
 @Component({
   selector: 'app-images',
   templateUrl: './images.component.html',
-  styleUrls: ['./images.component.sass']
+  styleUrls: ['./images.component.scss']
 })
 export class ImagesComponent implements OnInit {
+  images: Image[];
 
   constructor(private service: ImageService) { }
 
@@ -15,8 +17,8 @@ export class ImagesComponent implements OnInit {
   }
 
   getImages(): void {
-    this.service.getImages().subscribe((data) => {
-      console.log(data);
+    this.service.getImages().subscribe((data: Image[]) => {
+      this.images = data;
     });
   }
 }

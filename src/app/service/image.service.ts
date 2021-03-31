@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable()
 export class ImageService {
-    PAGE = '1';
+    PAGE = "1";
 
     constructor(private http: HttpClient) { }
 
