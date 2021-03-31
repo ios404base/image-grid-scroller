@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/images`.
 
 ## Approach
 
@@ -12,10 +12,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 - Implement the UI that presents images.
 - Implement the scroller.
 
-## Running unit tests
+## Things that can be improved
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Error handling
+- Handle size of images in a better way
+- Add tests
 
-## Running end-to-end tests
+## Notes
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- I used https://picsum.photos for external API since it was easier to configure. Used "author" instead of "title" and used "id" instead of "description" according to the API.
+
